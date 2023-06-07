@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+section
+{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  position: relative;
+  max-width: 80px;
+}
+header ul
+{
+  position: relative;
+  display: flex;
+}
+header ul li
+{
+  list-style: none;
+}
+header ul li a
+{
+  display: inline-block;
+  color: #333;
+  font-weight: 400;
+  margin-left: 40px;
+  text-decoration: none;
+}
+.content
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .textBox
+{
+  position: relative;
+  max-width: 300px;
+}
+.content .textBox h2
+{
+  color: #333;
+  font-size: 4em;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+.content .textBox h2 span
+{
+  color: #f00;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.content .textBox p
+{
+  color: #333;
+}
+.content .textBox a
+{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #017143;
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.content .imgBox
+{
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+.content .imgBox img
+{
+  max-width: 340px;
+}
+.thumb
+{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+}
+.thumb li
+{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.thumb li:hover
+{
+  transform: translateY(-15px);
+}
+.thumb li img
+{
+  max-width: 60px;
+}
+.sci 
+{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li
+{
+  list-style: none;
+}
+.sci li a
+{
+  padding-right: 5px;
+  display: inline-block;
+  margin: 5px 0;
+  transform: scale(0.6);
+  filter: invert(1);
+}
+.circle
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ad214b;
+  clip-path: circle(600px at right 700px);
+}
+#about {
+  padding: 20px;
+  background-color: #e3e8e9;
+  border-radius: 4px;
+}
+#about h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 40px;
+}
+#about .con{
+    margin:0 80px 0 80px;
+}
+#about p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Styles for the contact form container */
+.cf {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #bcdbd7;
+}
+
+/* Styles for form inputs */
+.cf input[type="text"],
+.cf input[type="email"],
+.cf textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styles for form submit button */
+.cf input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cf input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Styles for form success message */
+.cf .success-message {
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* Styles for form error message */
+.cf .error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Clearfix for the floated half-width elements */
+.cf::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+footer {
+  display: block;
+}

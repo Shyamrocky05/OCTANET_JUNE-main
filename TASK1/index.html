@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ibaco landing page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#"><img src="logo.png" class="logo"></a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>Ibaco Ice creams and Chocolates..<br>It's <span>ibaco</span></h2>
+        <p>The appetizing desert that is loved by everyone from kids to elders is ice creams. One of the pleasant and favorable ice creams is ibaco ice creams. The delicious smooth ice creams with exotic flavors and taste gives the best experience for those who relish it.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="imgBox">
+        <img src="img2.png" class="ibaco">
+      </div>
+    </div>
+    <ul class="thumb">
+      <li><img src="img3.png" onclick="imgSlider('img3.png');changeCircleColor('#ffe6b4')"></li>
+      <li><img src="img4.png" onclick="imgSlider('img4.png');changeCircleColor('#d752b1')"></li>
+      <li><img src="img5.png" onclick="imgSlider('img5.png');changeCircleColor('#8D5531')"></li>
+    </ul>
+    <ul class="sci">
+      <li><a href="#"><img src="s1.png" height="50px" width="50px"></a></li>
+      <li><a href="#"><img src="s2.png" height="50px" width="50px"></a></li>
+      <li><a href="#"><img src="s3.png" height="50px" width="50px"></a></li>
+    </ul>
+  </section>
+  <section name="menu" id="menu">
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <img class="mySlides" src="menu1.png">
+    <img class="mySlides" src="menu2.png">
+    <img class="mySlides" src="menu3.png">
+    <img class="mySlides" src="menu4.png" height="500" width="500">
+    <img class="mySlides" src="img1.png" height="500" width="500">
+    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  </section>
+  <section name="about" id="about">
+    <h1>About Us</h1>
+  <div class="con">
+    <div >
+      <p>IBACO is a renowned ice cream brand that has gained immense popularity for its delicious and unique flavors. With a strong presence in various cities, IBACO has become a go-to destination for ice cream enthusiasts.</p>
+    </div>
+    <div>
+      <p>From classic favorites like chocolate and vanilla to more adventurous flavors such as tiramisu and mango cheesecake, IBACO offers something to satisfy every palate. The brand continuously introduces new and seasonal flavors, keeping customers intrigued and eager to try their latest creations.</p>
+    </div>
+    <div>
+      <p>Whether you visit an IBACO outlet for a quick treat, a celebration, or to simply satisfy your ice cream cravings, you can expect exceptional quality, delightful flavors, and a memorable experience. IBACO has truly become a beloved ice cream destination, providing a delightful escape into a world of frozen indulgence.</p>
+    </div>
+  </div>
+  </section>
+  <section name="contact" id="contact">
+    <h1>Contact us:</h1>
+    <form class="cf">
+      <div class="half left cf">
+        <input type="text" id="input-name" placeholder="Name">
+        <input type="email" id="input-email" placeholder="Email address">
+        <input type="text" id="input-subject" placeholder="Subject">
+      </div>
+      <div class="half right cf">
+        <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+      </div>  
+      <input type="submit" value="Submit" id="input-submit">
+    </form>
+  </section>
+  <script type="text/javascript">
+    function imgSlider(anything){
+      document.querySelector('.ibaco').src = anything;
+    }
+
+    function changeCircleColor(color){
+      const circle = document.querySelector('.circle');
+      circle.style.background = color;
+    }
+    document.getElementById("input-submit").addEventListener("click", function(event) {
+      event.preventDefault();
+      alert("Form submitted successfully!");
+    });
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+  </script>
+  <footer>
+    Indulge in the pure delight of handcrafted ice cream, made with love at Ibaco.
+  </footer>
+</body>
+</html>
